@@ -18,7 +18,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import api from '../../services/api';
 
-interface ForgotPasswordormData {
+interface ForgotPasswordFormData {
     email: string;
 }
 
@@ -29,7 +29,7 @@ const ForgotPassword: React.FC = () => {
     const { addToast } = useToast();
 
     const handleSubmit = useCallback(
-        async (data: ForgotPasswordormData) => {
+        async (data: ForgotPasswordFormData) => {
             try {
                 setLoading(true);
 
@@ -94,7 +94,7 @@ const ForgotPassword: React.FC = () => {
                         </Button>
                     </Form>
 
-                    <Link to="/signin">
+                    <Link to="/">
                         <FiLogIn />
                         Voltar ao login
                     </Link>
